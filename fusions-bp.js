@@ -9,37 +9,22 @@ function Fusion(el1, el2, result) {
         }
         return false;
     }
-    this.hasFusionOf = function(els) {
-        // If el1 and el2 are the same
-        console.log(els)
-        if (els[0] == els[1] && els.includes(this.el1)) {
-            return result;
-        }
-        // If el1 and el2 are different
-        else if (els.includes(this.el1) && els.includes(this.el2) && this.el1 != this.el2) {
-            return result;
-        }
-        return false;
-    }
+    
     
 }
 
 function fuse(els) {
     console.log("fuse called")
     console.log(els)
-    /*
-    for (let i of fusions) {
-        console.log(i)
-        if (i.hasFusionOf(els)) {
-            return i.hasFusionOf(els)
-        }
-    }*/
     let ok = fusions.filter(function(f) {
-        if (els[0] == els[1] && els.includes(f.el1)) {
+        // If el1 and el2 are the same
+        if (f.el1 == f.el2 && els[0] == els[1] && els.includes(f.el1)) {
+            console.log(f.el1 + " == " + f.el2)
             return true;
         }
         // If el1 and el2 are different
         else if (els.includes(f.el1) && els.includes(f.el2) && f.el1 != f.el2) {
+            console.log(f.el1 + " == " + f.el2)
             return true;
         }
         return false;
