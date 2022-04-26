@@ -1,8 +1,22 @@
 fusions = [
-    new Fusion("fire", "water", ["smoke"]),
-    new Fusion("smoke", "smoke", ["dustStorm"]),
-    new Fusion("water", "water", ["sea"]),
-    new Fusion("water", "air", ["mist"]),
-    new Fusion("water", "earth", ["mud"])
+new Fusion("fire", "water", ['steam']),
+new Fusion("dust", "dust", ['dustStorm']),
+new Fusion("water", "water", ['sea']),
+new Fusion("water", "air", ['mist']),
+new Fusion("water", "earth", ['mud']),
+new Fusion("mud", "air", ['earth']),
+new Fusion("dust", "water", ['mud']),
+new Fusion("earth", "earth", ['pressure']),
+new Fusion("mud", "pressure", ['clay']),
+new Fusion("clay", "dust", ['urn']),
+new Fusion("earth", "sea", ['sand']),
+new Fusion("earth", "air", ['dust']),
+new Fusion("clay", "fire", ['brick']),
+new Fusion("brick", "brick", ['house']),
+new Fusion("house", "house", ['city']),
+new Fusion("city", "city", ['country']),
+new Fusion("country", "country", ['planet']),
+new Fusion("mist", "mist", ['cloud']),
+new Fusion("cloud", "cloud", ['sky']),
+new Fusion("sky", "water", ['rain']),
 ]
-

@@ -70,11 +70,15 @@ function spawnObject(name, x, y) {
   // add cursor styling
   box.on('pointerenter', function () {
     theObj = this
-    document.body.style.cursor = 'pointer';
+    document.body.style.cursor = 'grab';
     writeMessage(this.attrs.realName)
   });
   box.on('pointerdown', function() {
+    document.body.style.cursor = 'grabbing';
     this.moveToTop()
+  })
+  box.on('pointerup', function() {
+    document.body.style.cursor = 'grab';
   })
   box.on('pointerout', function () {
     theObj = null
@@ -88,6 +92,7 @@ function spawnObject(name, x, y) {
     this.moveToTop()
   })
   box.on('dragend', function() {
+    document.body.style.cursor = 'grab';
     writeMessage("")
     //console.log(this.parent.getIntersection({x: this.attrs.x, y: this.attrs.y}))
     //console.log(this)
