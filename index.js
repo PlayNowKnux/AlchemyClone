@@ -131,8 +131,10 @@ function spawnObject(name, x, y) {
       width: stage.width(),
       height: stage.height()
     })) {
+      me.attrs.width = me.attrs.height = 32
       writeMessage("Destroy element?")
     } else {
+      me.attrs.width = me.attrs.height = 64
       writeMessage(me.attrs.realName)
     }
   })
@@ -162,7 +164,7 @@ function spawnObject(name, x, y) {
     }
     // The object that intersects with the object you're dragging
     let secondObj = stage.getLayers()[0].children.find(function(i) {
-      console.log(me)
+      //console.log(me)
       return collides(me.attrs.bbox, i.attrs.bbox)
     });
     // If there is no second object, quit
@@ -175,14 +177,15 @@ function spawnObject(name, x, y) {
     let secondName = secondObj.attrs.name
     // Fuse the elements
     let fusion = fuse([this.attrs.name, secondName]);
-    console.log(fusion)
+    //console.log(fusion)
     // If there is a fusion
     if (fusion) {
-      console.log(fusion)
+      //console.log(fusion)
       let ctr = 0;
       for (let i of fusion) {
         let o = spawnObject(i, this.attrs.x + (32 * ctr), this.attrs.y + (32 * ctr))
         writeMessage(o.attrs.realName)
+        ctr++;
       }
       // Destroy elements
       secondObj.destroy()

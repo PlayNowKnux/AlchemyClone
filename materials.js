@@ -21,5 +21,14 @@ materials = {
     city: {name: "City"},
     country: {name: "Country"},
     planet: {name: "Planet"},
-    steam: {name: "Steam"}   
+    steam: {name: "Steam"},
+    climateChange: {name: "Climate Change", terminal: true},
+    theIncident: {name: "THE INCIDENT", terminal: true},
+    grass: {name: "Grass"},
+    tree: {name: "Tree"},
+    life: {name: "Life"},
+    stone: {name: "Stone"},
+    forest: {name: "Forest"},
+    energy: {name: "Energy"},
+    metal: {name: "Metal"},  
 }

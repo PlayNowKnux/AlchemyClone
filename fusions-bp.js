@@ -14,17 +14,17 @@ function Fusion(el1, el2, result) {
 }
 
 function fuse(els) {
-    console.log("fuse called")
-    console.log(els)
+    //console.log("fuse called")
+    //console.log(els)
     let ok = fusions.filter(function(f) {
         // If el1 and el2 are the same
         if (f.el1 == f.el2 && els[0] == els[1] && els.includes(f.el1)) {
-            console.log(f.el1 + " == " + f.el2)
+            //console.log(f.el1 + " == " + f.el2)
             return true;
         }
         // If el1 and el2 are different
         else if (els.includes(f.el1) && els.includes(f.el2) && f.el1 != f.el2) {
-            console.log(f.el1 + " == " + f.el2)
+            //console.log(f.el1 + " == " + f.el2)
             return true;
         }
         return false;
